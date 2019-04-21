@@ -1,4 +1,15 @@
 @import 'backgrounds.scss';
 @import 'hovers.scss';
+@import 'mixins.scss';
 
 // Global SCSS
+body {
+  background-image: url("../assets/images/Capitol-Dome-Night-Light-Blur.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 690px;
+  background-position-x: 80%;
+  @include mQ(1024px) {
+    background-position-x: 0px;
+  }
+}
