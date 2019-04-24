@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../scss/styles.scss';
 
 class Home extends React.Component {
@@ -81,7 +82,7 @@ class Home extends React.Component {
           <button type="submit" onClick={()=>this.disappear()}>Button</button>
         </div>
         <div className={true===this.state.stageVisibleOnPage? "secondRound hide" : "secondRound show"}>
-          <button type="submit">Select Representative</button>
+          <Link to="/Results"><button type="submit">Select Representative</button></Link>
           <div className="issueInput">
             <p>Issue: </p>
             <input type="text"></input>
