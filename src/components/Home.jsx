@@ -5,26 +5,26 @@ class Home extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      activeClass: true
+      activeClass: true,
+      stageVisibleOnPage: true
     };
     this.disappear = this.disappear.bind(this);
   }
 
   disappear() {
+    if (this.state.stageVisibleOnPage === true) {
+      this.setState({stageVisibleOnPage: false});
+    }
     if (this.state.activeClass === true) {
       this.setState({activeClass: false});
     }
-  }
-
-  appear() {
-    
   }
 
   render() {
     return (
       <div>
         <h1 className="site-name">Site Name</h1>
-        <div className="main-select">
+        <div className={true===this.state.activeClass? "main-select show" : "main-select hide"}>
           <select>
             <option disabled selected value="">-- Select Your State --</option>
             <option value="AL">Alabama</option>
@@ -78,13 +78,18 @@ class Home extends React.Component {
             <option value="WI">Wisconsin</option>
             <option value="WY">Wyoming</option>
           </select>
-          <button type="submit" onClick={()=>this.disappear()} className={true===this.state.activeClass? "show" : "hide"}>Button</button>
+          <button type="submit" onClick={()=>this.disappear()}>Button</button>
+        </div>
+        <div className={true===this.state.stageVisibleOnPage? "secondRound hide" : "secondRound show"}>
+          <button type="submit">Select Representative</button>
+          <div className="issueInput">
+            <p>Issue: </p>
+            <input type="text"></input>
+          </div>
         </div>
       </div>
     );
   }
-
-
 }
 
 export default Home;

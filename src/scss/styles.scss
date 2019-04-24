@@ -43,6 +43,26 @@ body {
   opacity: 0;
 }
 
+.secondRound {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.issueInput {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  p {
+    color: white;
+    margin-right: 10px;
+  }
+  input {
+    height: 15px;
+  }
+}
+
 // Navbar SCSS
 .navbar {
   display: flex;
