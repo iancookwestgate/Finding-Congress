@@ -9,6 +9,7 @@ body {
   background-size: cover;
   min-height: 690px;
   background-position-x: 40%;
+  overflow: hidden;
   @include mQ(1024px) {
     background-position-x: 0px;
   }
@@ -30,6 +31,10 @@ body {
     height: 40px;
     border-radius: 5px;
   }
+}
+
+#firstButton {
+  margin-top: 1%;
 }
 
 .show {
@@ -76,5 +81,22 @@ body {
   a {
     text-decoration: none;
     color: white;
+  }
+}
+
+// Results SCSS
+.resultsPage {
+  color: white;
+}
+
+// Error404 SCSS
+.errorSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  a {
+    color: turquoise;
   }
 }

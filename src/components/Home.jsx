@@ -79,7 +79,7 @@ class Home extends React.Component {
             <option value="WI">Wisconsin</option>
             <option value="WY">Wyoming</option>
           </select>
-          <button type="submit" onClick={()=>this.disappear()}>Button</button>
+          <button id="firstButton" type="submit" onClick={()=>this.disappear()}>Button</button>
         </div>
         <div className={true===this.state.stageVisibleOnPage? "secondRound hide" : "secondRound show"}>
           <Link to="/Results"><button type="submit">Select Representative</button></Link>

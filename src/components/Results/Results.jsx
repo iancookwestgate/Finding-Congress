@@ -4,7 +4,7 @@ import '../scss/styles.scss';
 
 function Results(){
   return (
-    <div>
+    <div className="resultsPage">
       <h1>You found the Results component!</h1>
     </div>
   );
