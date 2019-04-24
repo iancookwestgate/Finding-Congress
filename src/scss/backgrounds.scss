@@ -1,9 +1,14 @@
 $gry: #eee;
 $grn: rgba(0,255,0,1);
+$nvy: #000040;
 
 .bg-gry{
   background-color: $gry;
 }
 .bg-grn{
   background-color: $grn;
+}
+
+.bg-nvy{
+  background-color: $nvy;
 }

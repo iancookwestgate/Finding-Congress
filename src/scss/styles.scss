@@ -8,7 +8,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 690px;
-  background-position-x: 80%;
+  background-position-x: 40%;
   @include mQ(1024px) {
     background-position-x: 0px;
   }
@@ -18,4 +18,43 @@ body {
 .site-name {
   color: white;
   text-align: center;
+}
+
+.main-select {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  select {
+    height: 40px;
+    border-radius: 5px;
+  }
+}
+
+.show {
+  transition: .3s linear;
+  display: flex;
+  opacity: 1;
+}
+
+.hide {
+  transition: .3s linear;
+  opacity: 0;
+}
+
+// Navbar SCSS
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 50px;
+  a {
+    text-decoration: none;
+    color: white;
+  }
 }

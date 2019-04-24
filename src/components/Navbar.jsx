@@ -4,9 +4,9 @@ import '../scss/styles.scss';
 
 function Navbar(){
   return (
-    <div>
-      <h2>This is the Navbar component.</h2>
-      <Link to="/">Home Link</Link>
+    <div className="bg-nvy navbar">
+      <Link to="/"><a>Home</a></Link>
+      <Link to="/"><a>About</a></Link>
     </div>
   );
 }
