@@ -1,6 +1,5 @@
-import React, {Component} from 'react';
-// import Home from '../Home';
-import '../scss/styles.scss';
+import React from 'react';
+import '../../scss/styles.scss';
 
 function Results(){
   return (
