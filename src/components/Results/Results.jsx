@@ -1,11 +1,16 @@
 import React from 'react';
 import bbc from '../../assets/images/bbc-news-logo.png';
+import icon from '../../assets/images/capitol-hill-icon.png';
+import { Link } from 'react-router-dom';
 import '../../scss/styles.scss';
 
 function Results(){
   return (
     <div className="resultsPage">
-      <h1 className="site-name">Site Name</h1>
+      <div className="topArrange">
+        <Link to="/"><img className="capHillIcon" src={icon} alt="sample image"></img></Link>
+        <h1 className="site-name">Site Name</h1>
+      </div>
       <div className="news-layout">
         <div className="card">
           <img src={bbc} alt="sample image"></img>

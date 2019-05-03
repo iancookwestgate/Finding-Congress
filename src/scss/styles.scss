@@ -21,7 +21,7 @@ body {
 
 }
 
-#capHillIcon {
+.capHillIcon {
   margin-left: 2%;
   margin-top: 2%;
   height: 100px;
@@ -100,10 +100,10 @@ body {
 
 .submitButton {
   margin-top: 10%;
-  // Correct the below later. The margin-bottom percentages. Artificially bloats the background image on small screen to cover up white space.
-  margin-bottom: 80%;
   display: flex;
   justify-content: center;
+  // Correct the below later. The margin-bottom percentages. Artificially bloats the background image on small screen to cover up white space.
+  margin-bottom: 80%;
   @include mQ(1024px) {
     margin-bottom: 30%;
   }

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import merkley from '../assets/images/Jeff-Merkley.jpg';
+import wyden from '../assets/images/Ron-Wyden.jpg';
 import icon from '../assets/images/capitol-hill-icon.png';
 import '../scss/styles.scss';
 
@@ -27,7 +28,7 @@ class Home extends React.Component {
     return (
       <div>
         <div className="topArrange">
-          <img id="capHillIcon" src={icon} alt="sample image"></img>
+          <Link to="/"><img className="capHillIcon" src={icon} alt="sample image"></img></Link>
           <h1 className="site-name">Site Name</h1>
         </div>
         <div className={true===this.state.activeClass? "main-select show" : "main-select hide"}>
@@ -98,12 +99,12 @@ class Home extends React.Component {
               </div>
             </div>
             <div className="card">
-              <img src={merkley} alt="sample image"></img>
+              <img src={wyden} alt="sample image"></img>
               <div className="card-container">
-                <h4><b>Jeff Merkley</b></h4>
-                <p>Senator, First Class</p>
+                <h4><b>Ron Wyden</b></h4>
+                <p>Senator, Second Class</p>
                 <p>Democratic Party</p>
-                <p>Next Election: 2020</p>
+                <p>Next Election: 2022</p>
               </div>
             </div>
           </div>
