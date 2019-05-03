@@ -4,10 +4,11 @@
 
 ## Description
 
-
+In a world brimming over with breaking news, it's easy to get overwhelmed and feel powerless about what you hear. This site aims to overcome that feeling by presenting the news through a simple filter: you select your state, select the congressman/woman of your choice, type in an issue you'd like to hear their opinion on (or not), and then click a button. You're immediately presented with curated results from the News API and info on how to contact your representative to support (or chastise) them for their publicly declared stance on the matter.
 
 ## Component Structure
 
+To be added soon.
 
 ## Setup
 
@@ -20,15 +21,15 @@
 
 ## Site Features
 
-*
-*
-*
+* Pick your state from a select menu and then confirm with a search button.
+* Select the representative you want to hear about (their info is retrieved from the ProPublica Congress API), optionally input an issue of interest, then confirm with one more search button.
+* You are presented with a list of relevant news articles about what you searched from the News API.
 
 ## Planned Features
 
-*
-*
-*
+* API connections have not yet been made.
+* Select menus and buttons are not yet working properly.
+* Styling needs to be tidied up for buttons, navbar, and site name.
 
 ## Technologies Used
 
@@ -44,9 +45,10 @@
 
 ## Known Bugs
 
-*
-*
-*
+* Console errors:
+   * Unknown DOM property class. Did you mean className?
+   * Unknown DOM property for. Did you mean htmlFor?
+   * validateDOMNesting(...): <a> cannot appear as a descendant of <a>. See Navbar > Link > a > ... > a.
 
 ## Support and contact details
 
