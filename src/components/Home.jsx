@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import merkley from '../assets/images/Jeff-Merkley.jpg';
+import icon from '../assets/images/capitol-hill-icon.png';
 import '../scss/styles.scss';
 
 class Home extends React.Component {
@@ -25,7 +26,10 @@ class Home extends React.Component {
   render() {
     return (
       <div>
-        <h1 className="site-name">Site Name</h1>
+        <div className="topArrange">
+          <img id="capHillIcon" src={icon} alt="sample image"></img>
+          <h1 className="site-name">Site Name</h1>
+        </div>
         <div className={true===this.state.activeClass? "main-select show" : "main-select hide"}>
           <select>
             <option disabled selected value="">-- Select Your State --</option>

@@ -17,9 +17,19 @@ body {
 }
 
 // Home SCSS
+.topArrange {
+  display: flex;
+  justify-content:
+}
+
+#capHillIcon {
+  height: 100px;
+}
+
 .site-name {
   color: white;
-  text-align: center;
+  position: absolute;
+  margin: 0 auto;
 }
 
 .main-select {
