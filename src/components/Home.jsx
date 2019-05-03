@@ -87,8 +87,8 @@ class Home extends React.Component {
             <div className="card">
               <img src={sampleImg} alt="sample image"></img>
               <div className="card-container">
-                <h4><b>Congressman Sample</b></h4>
-                <p>Details</p>
+                <h4><b>Senator Nancy Pelosi of California</b></h4>
+                <p>Next Election: 2020</p>
               </div>
             </div>
           </div>
