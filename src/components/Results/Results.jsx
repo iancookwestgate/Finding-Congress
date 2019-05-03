@@ -12,7 +12,7 @@ function Results(){
           <div className="card-container">
             <h4><b>Sample text for a news title that might be pretty lengthy so check if this works</b></h4>
             <p>By author author author</p>
-            <p>Published date: 05-01-2019</p>
+            <p><em>Published on:</em> 05-01-2019</p>
           </div>
         </div>
         <div className="card">
@@ -20,7 +20,7 @@ function Results(){
           <div className="card-container">
             <h4><b>Sample text for a news title that might be pretty lengthy so check if this works</b></h4>
             <p>By author author author</p>
-            <p>Published date: 05-01-2019</p>
+            <p><em>Published on:</em> 05-01-2019</p>
           </div>
         </div>
       </div>
