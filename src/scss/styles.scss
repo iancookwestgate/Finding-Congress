@@ -83,12 +83,32 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
+  margin-top: 10%;
   p {
     color: white;
     margin-right: 10px;
   }
+  label {}
   input {
+    transition: .3s ease;
     height: 15px;
+    &:valid {
+      ~label {
+        top: 0;
+        font: 700;
+      }
+    }
+    &:focus {
+      outline: none;
+      ~label {
+        top: 0;
+        font: 700;
+        color: #2196f3;
+      }
+    }
+  }
+  @include mQ(1024px) {
+    padding: 0;
   }
 }
 
