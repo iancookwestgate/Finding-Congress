@@ -56,8 +56,6 @@ body {
 }
 
 .congress-layout {
-
-
   .card {
     display: flex;
     border-radius: 4px;
@@ -91,6 +89,11 @@ body {
   }
 }
 
+.submitButton {
+  display: flex;
+  justify-content: center;
+}
+
 // Navbar SCSS
 .navbar {
   display: flex;
@@ -110,6 +113,17 @@ body {
 // Results SCSS
 .resultsPage {
   color: white;
+}
+
+.news-layout {
+  .card {
+    img {
+      height: 200px;
+    }
+  }
+  .card-container {
+
+  }
 }
 
 // Error404 SCSS

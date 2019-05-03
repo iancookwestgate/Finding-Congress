@@ -99,7 +99,9 @@ class Home extends React.Component {
             <input type="text"></input>
           </div>
         </div>
-        <Link to="/Results"><button type="submit">Input Selection</button></Link>
+        <div className="submitButton">
+          <Link to="/Results"><button type="submit">Input Selection</button></Link>
+        </div>
       </div>
     );
   }
