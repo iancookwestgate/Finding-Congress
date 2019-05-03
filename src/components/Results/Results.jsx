@@ -16,8 +16,25 @@ function Results(){
           </div>
         </div>
       </div>
+      <div className="news-layout">
+        <div className="card">
+          <img src={bbc} alt="sample image"></img>
+          <div className="card-container">
+            <h4><b>Sample text for a news title that might be pretty lengthy so check if this works</b></h4>
+            <p>By author author author</p>
+            <p>Published date: 05-01-2019</p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
+
+// News.propTypes = {
+//   img: PropTypes.string,
+//   title: PropTypes.string,
+//   author: PropTypes.string,
+//   date: PropTypes.string
+// };
 
 export default Results;

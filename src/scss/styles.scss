@@ -117,14 +117,19 @@ body {
 
 .news-layout {
   padding-top: 5%;
-  flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  // flex-wrap: wrap;
   margin: 0 auto;
+  color: black;
   .card {
     max-width: 400px;
     display: flex;
     flex-direction: column;
+    background-color: #e4e6e7;
     img {
-      width: 200px;
+      width: 400px;
+      height: 250px;
     }
   }
   .card-container {
