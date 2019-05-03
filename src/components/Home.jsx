@@ -103,10 +103,12 @@ class Home extends React.Component {
               </div>
             </div>
           </div>
-          <div className="issueInput">
-            <input type="text" id="name" required="required"></input>
-            <label for="name">Name</label>
-            <div class="bar"></div>
+          <div class="centered">
+            <div class="group">
+              <input type="text" id="name" required="required"/>
+              <label for="name">Name</label>
+              <div class="bar"></div>
+            </div>
           </div>
         </div>
         <div className={true===this.state.stageVisibleOnPage? "submitButton hide" : "submitButton show"}>
