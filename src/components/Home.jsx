@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import sampleImg from '../assets/images/blank-profile-pic.png';
+import merkley from '../assets/images/Jeff-Merkley.jpg';
 import '../scss/styles.scss';
 
 class Home extends React.Component {
@@ -85,9 +85,11 @@ class Home extends React.Component {
         <div className={true===this.state.stageVisibleOnPage? "secondRound hide" : "secondRound show"}>
           <div className="congress-layout">
             <div className="card">
-              <img src={sampleImg} alt="sample image"></img>
+              <img src={merkley} alt="sample image"></img>
               <div className="card-container">
-                <h4><b>Senator Nancy Pelosi of California</b></h4>
+                <h4><b>Jeff Merkley</b></h4>
+                <p>Senator, First Class</p>
+                <p>Democratic Party</p>
                 <p>Next Election: 2020</p>
               </div>
             </div>

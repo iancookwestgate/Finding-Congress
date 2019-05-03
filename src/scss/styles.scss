@@ -56,10 +56,12 @@ body {
 }
 
 .congress-layout {
-  // background-color: #e4e6e7;
-  background-color: green;
+
 
   .card {
+    display: flex;
+    border-radius: 4px;
+    background-color: #e4e6e7;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
   }
@@ -67,10 +69,11 @@ body {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
   }
   .card-container {
-    padding: 7px;
+    padding: 20px;
   }
   img {
-    height: 150px;
+    height: 225px;
+    border-radius: 4px 0 0 4px;
   }
 }
 
