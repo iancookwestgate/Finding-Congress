@@ -5,6 +5,7 @@ import '../../scss/styles.scss';
 function Results(){
   return (
     <div className="resultsPage">
+      <h1 className="site-name">Site Name</h1>
       <div className="news-layout">
         <div className="card">
           <img src={bbc} alt="sample image"></img>

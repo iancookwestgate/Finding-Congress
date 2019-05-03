@@ -116,9 +116,11 @@ body {
 }
 
 .news-layout {
+  padding-top: 5%;
   flex-wrap: wrap;
   margin: 0 auto;
   .card {
+    max-width: 400px;
     display: flex;
     flex-direction: column;
     img {
