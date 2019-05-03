@@ -85,7 +85,7 @@ class Home extends React.Component {
             <option value="WI">Wisconsin</option>
             <option value="WY">Wyoming</option>
           </select>
-          <button id="firstButton" type="submit" onClick={()=>this.disappear()}>Button</button>
+          <button id="firstButton" type="submit" onClick={()=>this.disappear()}>Search</button>
         </div>
         <div className={true===this.state.stageVisibleOnPage? "secondRound hide" : "secondRound show"}>
           <div className="congress-layout">
@@ -117,7 +117,7 @@ class Home extends React.Component {
           </div>
         </div>
         <div className={true===this.state.stageVisibleOnPage? "submitButton hide" : "submitButton show"}>
-          <Link to="/Results"><button type="submit">Input Selection</button></Link>
+          <Link to="/Results"><button type="submit">Search</button></Link>
         </div>
       </div>
     );
