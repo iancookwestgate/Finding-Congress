@@ -18,18 +18,23 @@ body {
 
 // Home SCSS
 .topArrange {
-  display: flex;
-  justify-content:
+
 }
 
 #capHillIcon {
+  margin-left: 2%;
+  margin-top: 2%;
   height: 100px;
+  margin-bottom: -6%;
+  @include mmQ(1024px) {
+    margin-bottom: -15%;
+  }
 }
 
 .site-name {
   color: white;
-  position: absolute;
   margin: 0 auto;
+  text-align: center;
 }
 
 .main-select {
