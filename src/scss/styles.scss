@@ -116,13 +116,17 @@ body {
 }
 
 .news-layout {
+  flex-wrap: wrap;
+  margin: 0 auto;
   .card {
+    display: flex;
+    flex-direction: column;
     img {
-      height: 200px;
+      width: 200px;
     }
   }
   .card-container {
-
+    padding: 20px;
   }
 }
 

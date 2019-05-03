@@ -9,10 +9,9 @@ function Results(){
         <div className="card">
           <img src={bbc} alt="sample image"></img>
           <div className="card-container">
-            <h4><b>Jeff Merkley</b></h4>
-            <p>Senator, First Class</p>
-            <p>Democratic Party</p>
-            <p>Next Election: 2020</p>
+            <h4><b>Sample text for a news title that might be pretty lengthy so check if this works</b></h4>
+            <p>By author author author</p>
+            <p>Published date: 05-01-2019</p>
           </div>
         </div>
       </div>
