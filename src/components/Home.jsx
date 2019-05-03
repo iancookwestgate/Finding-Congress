@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import sampleImg from '../assets/images/blank-profile-pic.png';
 import '../scss/styles.scss';
 
 class Home extends React.Component {
@@ -82,12 +83,21 @@ class Home extends React.Component {
           <button id="firstButton" type="submit" onClick={()=>this.disappear()}>Button</button>
         </div>
         <div className={true===this.state.stageVisibleOnPage? "secondRound hide" : "secondRound show"}>
-          <Link to="/Results"><button type="submit">Select Representative</button></Link>
+          <div className="congress-layout">
+            <div className="card">
+              <img src={sampleImg} alt="sample image"></img>
+              <div className="card-container">
+                <h4><b>Congressman Sample</b></h4>
+                <p>Details</p>
+              </div>
+            </div>
+          </div>
           <div className="issueInput">
             <p>Issue: </p>
             <input type="text"></input>
           </div>
         </div>
+        <Link to="/Results"><button type="submit">Input Selection</button></Link>
       </div>
     );
   }
