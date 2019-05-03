@@ -15,8 +15,6 @@ function Results(){
             <p>Published date: 05-01-2019</p>
           </div>
         </div>
-      </div>
-      <div className="news-layout">
         <div className="card">
           <img src={bbc} alt="sample image"></img>
           <div className="card-container">

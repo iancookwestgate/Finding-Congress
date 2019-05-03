@@ -119,13 +119,12 @@ body {
   padding-top: 5%;
   display: flex;
   flex-direction: row;
-  // flex-wrap: wrap;
-  margin: 0 auto;
+  flex-wrap: wrap;
   color: black;
+  justify-content: center;
   .card {
+    margin: 5%;
     max-width: 400px;
-    display: flex;
-    flex-direction: column;
     background-color: #e4e6e7;
     img {
       width: 400px;
@@ -133,8 +132,13 @@ body {
     }
   }
   .card-container {
-    padding: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 5px;
   }
+  // @include mQ(1024px) {
+  //   background-position-x: 0px;
+  // }
 }
 
 // Error404 SCSS
