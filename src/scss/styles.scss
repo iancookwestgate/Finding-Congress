@@ -6,12 +6,12 @@
 body {
   background-image: url("../assets/images/Capitol-Dome-Night-Light-Blur.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100%;
   min-height: 690px;
-  background-position-x: 40%;
+  // background-position-x: 40%;
   overflow: hidden;
   @include mQ(1024px) {
-    background-position-x: 0px;
+    // background-position-x: 0px;
   }
 }
 
