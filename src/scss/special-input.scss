@@ -8,8 +8,6 @@ $width: 550px; // Change Me
   box-sizing: border-box;
 }
 
-body {background: $main-color;}
-
 .centered {
   width: $width;
   height: $width/5;
@@ -28,9 +26,13 @@ body {background: $main-color;}
 
 label {
   position: absolute;
-  top: $width/15;
-  color: rgba(white, .5);
-  font: 400 $width/15 Roboto;
+  margin-left: 1%;
+  top: 525px;
+  @include mmQ(1024px) {
+    top: 910px;
+  }
+  color: whitesmoke;
+  font: 400 $width/20 Roboto;
   cursor: text;
   transition: .25s ease;
 }
@@ -40,11 +42,11 @@ input {
   width: 100%;
   padding-top: $width/15;
   border: none;
-  border-radius: 0; // For iOS
+  border-radius: 4px; // For iOS
   // border-bottom: solid $width/150 rgba(white, .5);
   color: white;
   background: $main-color;
-  font-size: $width/15;
+  font-size: $width/10;
   transition: .3s ease;
   &:valid {
     // border-bottom-color: rgba(white, .5);
@@ -58,7 +60,11 @@ input {
     outline: none;
     // border-bottom-color: $secondary-color;
     ~label {
-      top: 0;
+      top: 460px;
+      @include mmQ(1024px){
+        top: 840px;
+      }
+      margin: 0;
       font: 700 $width/25 Roboto;
       color: $secondary-color;
     }

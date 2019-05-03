@@ -67,6 +67,9 @@ body {
     transition: 0.1s;
     cursor: pointer;
     margin-top: 5%;
+    @include mmQ(1024px) {
+      margin-bottom: 15%;
+    }
     img {
       height: 240px;
       border-radius: 4px 0 0 4px;

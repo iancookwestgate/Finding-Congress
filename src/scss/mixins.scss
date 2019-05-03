@@ -3,3 +3,9 @@
     @content;
   }
 }
+
+@mixin mmQ($arg) {
+  @media screen and (max-width: $arg){
+    @content;
+  }
+}

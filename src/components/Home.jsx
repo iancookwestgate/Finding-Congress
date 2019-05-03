@@ -106,7 +106,7 @@ class Home extends React.Component {
           <div class="centered">
             <div class="group">
               <input type="text" id="name" required="required"/>
-              <label for="name">Name</label>
+              <label for="name">What political issue interests you?</label>
               <div class="bar"></div>
             </div>
           </div>
