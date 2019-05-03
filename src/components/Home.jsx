@@ -93,6 +93,15 @@ class Home extends React.Component {
                 <p>Next Election: 2020</p>
               </div>
             </div>
+            <div className="card">
+              <img src={merkley} alt="sample image"></img>
+              <div className="card-container">
+                <h4><b>Jeff Merkley</b></h4>
+                <p>Senator, First Class</p>
+                <p>Democratic Party</p>
+                <p>Next Election: 2020</p>
+              </div>
+            </div>
           </div>
           <div className="issueInput">
             <p>Issue: </p>

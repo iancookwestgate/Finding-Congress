@@ -50,9 +50,12 @@ body {
 
 .secondRound {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  @include mQ(1024px) {
+    flex-direction: row;
+  }
 }
 
 .congress-layout {
@@ -62,6 +65,7 @@ body {
     background-color: #e4e6e7;
     transition: 0.1s;
     cursor: pointer;
+    margin-top: 5%;
     img {
       height: 240px;
       border-radius: 4px 0 0 4px;
@@ -90,8 +94,13 @@ body {
 
 .submitButton {
   margin-top: 10%;
+  // Correct the below later. The margin-bottom percentages. Artificially bloats the background image on small screen to cover up white space.
+  margin-bottom: 80%;
   display: flex;
   justify-content: center;
+  @include mQ(1024px) {
+    margin-bottom: 30%;
+  }
 }
 
 // Navbar SCSS
