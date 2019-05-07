@@ -30,7 +30,6 @@ class Home extends React.Component {
   apiCall(event) {
     event.preventDefault();
     let banana = this.state.stateSelect;
-    console.log(banana);
     return fetch(`https://api.propublica.org/congress/v1/members/senate/${banana}/current.json`, {
       headers: {
         "X-API-Key": "qBzsniwfy44MpdRfy4z1WX8bnqsfkxryYtt0hdE4",
@@ -38,13 +37,12 @@ class Home extends React.Component {
     }).then(
       response => response.json(),
       error => console.log('Error, idiet')
-    ).then(function(input) {
+    ).then((input) => {
       console.log(input);
-      if (json) {
-
+      if (input) {
+        this.disappear();
       } else {
         alert("Something fucked up");
-        disappear();
       }
     })
   }
