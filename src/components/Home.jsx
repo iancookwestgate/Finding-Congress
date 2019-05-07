@@ -12,7 +12,7 @@ class Home extends React.Component {
       activeClass: true,
       stageVisibleOnPage: true,
       masterArray: [],
-      html: <h1>hey</h1>
+      html: null
     };
     this.disappear = this.disappear.bind(this);
     this.handleChange = this.handleChange.bind(this);
@@ -46,10 +46,11 @@ class Home extends React.Component {
         console.log(newState);
         this.setState({masterArray: newState});
         const htmlVar = this.state.masterArray.map((card, index) =>
+
           <Card name={card.name}
-            senateYear={card.senateYear}
-            party={card.party}
-            nextUp={card.nextUp}
+            senateYear={card.role}
+            party={card.party == "R" ? "Republican" : "Democrat"}
+            nextUp={card.next_election}
             key={index}/>
         );
         this.setState({html: htmlVar});

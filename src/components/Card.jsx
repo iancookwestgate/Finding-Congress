@@ -1,5 +1,6 @@
 import React from 'react';
 import blank from '../assets/images/blank-profile-pic.png';
+import PropTypes from 'prop-types';
 import '../scss/styles.scss';
 
 
@@ -20,25 +21,12 @@ function Card(props) {
   );
 }
 
-// <div className="congress-layout">
-//   <div className="card">
-//     <img src={merkley} alt="sample image"></img>
-//     <div className="card-container">
-//       <h4><b>Jeff Merkley</b></h4>
-//       <p>Senator, First Class</p>
-//       <p>Democratic Party</p>
-//       <p>Next Election: 2020</p>
-//     </div>
-//   </div>
-//   <div className="card">
-//     <img src={wyden} alt="sample image"></img>
-//     <div className="card-container">
-//       <h4><b>Ron Wyden</b></h4>
-//       <p>Senator, Second Class</p>
-//       <p>Democratic Party</p>
-//       <p>Next Election: 2022</p>
-//     </div>
-//   </div>
-// </div>
+Card.propTypes = {
+  name: PropTypes.string,
+  senateYear: PropTypes.string,
+  party: PropTypes.string,
+  nextUp: PropTypes.string
+};
+
 
 export default Card;
