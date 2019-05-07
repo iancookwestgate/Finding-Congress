@@ -1,7 +1,6 @@
 import React from 'react';
+import Card from './Card';
 import { Link } from 'react-router-dom';
-import merkley from '../assets/images/Jeff-Merkley.jpg';
-import wyden from '../assets/images/Ron-Wyden.jpg';
 import icon from '../assets/images/capitol-hill-icon.png';
 import '../scss/styles.scss';
 
@@ -13,6 +12,7 @@ class Home extends React.Component {
       activeClass: true,
       stageVisibleOnPage: true,
       masterArray: [],
+      html: <h1>hey</h1>
     };
     this.disappear = this.disappear.bind(this);
     this.handleChange = this.handleChange.bind(this);
@@ -37,7 +37,6 @@ class Home extends React.Component {
       }
     }).then(
       response => response.json(),
-      error => console.log('Error, idiet')
     ).then((input) => {
       if (input) {
         let newState = this.state.masterArray;
@@ -46,6 +45,14 @@ class Home extends React.Component {
         })
         console.log(newState);
         this.setState({masterArray: newState});
+        const htmlVar = this.state.masterArray.map((card, index) =>
+          <Card name={card.name}
+            senateYear={card.senateYear}
+            party={card.party}
+            nextUp={card.nextUp}
+            key={index}/>
+        );
+        this.setState({html: htmlVar});
         this.disappear()
       } else {
         alert("Something fucked up");
@@ -68,7 +75,7 @@ class Home extends React.Component {
         <div className={true===this.state.activeClass? "main-select show" : "main-select hide"}>
           <form onSubmit={this.apiCall}>
             <select value={this.state.stateSelect} onChange={this.handleChange}>
-              <option disabled selected value="">-- Select Your State --</option>
+              <option selected value="">-- Select Your State --</option>
               <option value="AL">Alabama</option>
               <option value="AK">Alaska</option>
               <option value="AZ">Arizona</option>
@@ -124,25 +131,8 @@ class Home extends React.Component {
           </form>
         </div>
         <div className={true===this.state.stageVisibleOnPage? "secondRound hide" : "secondRound show"}>
-          <div className="congress-layout">
-            <div className="card">
-              <img src={merkley} alt="sample image"></img>
-              <div className="card-container">
-                <h4><b>Jeff Merkley</b></h4>
-                <p>Senator, First Class</p>
-                <p>Democratic Party</p>
-                <p>Next Election: 2020</p>
-              </div>
-            </div>
-            <div className="card">
-              <img src={wyden} alt="sample image"></img>
-              <div className="card-container">
-                <h4><b>Ron Wyden</b></h4>
-                <p>Senator, Second Class</p>
-                <p>Democratic Party</p>
-                <p>Next Election: 2022</p>
-              </div>
-            </div>
+          <div className="cardLanding">
+            {this.state.html}
           </div>
           <div class="centered">
             <div class="group">
@@ -159,7 +149,5 @@ class Home extends React.Component {
     );
   }
 }
-
-
 
 export default Home;

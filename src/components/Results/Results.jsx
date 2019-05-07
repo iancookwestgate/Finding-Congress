@@ -35,11 +35,4 @@ function Results(){
   );
 }
 
-// News.propTypes = {
-//   img: PropTypes.string,
-//   title: PropTypes.string,
-//   author: PropTypes.string,
-//   date: PropTypes.string
-// };
-
 export default Results;
