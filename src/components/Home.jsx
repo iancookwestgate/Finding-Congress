@@ -11,7 +11,8 @@ class Home extends React.Component {
     this.state = {
       stateSelect: "select",
       activeClass: true,
-      stageVisibleOnPage: true
+      stageVisibleOnPage: true,
+      masterArray: [],
     };
     this.disappear = this.disappear.bind(this);
     this.handleChange = this.handleChange.bind(this);
@@ -38,9 +39,14 @@ class Home extends React.Component {
       response => response.json(),
       error => console.log('Error, idiet')
     ).then((input) => {
-      console.log(input);
       if (input) {
-        this.disappear();
+        let newState = this.state.masterArray;
+        input.results.forEach(function(el) {
+          newState.push(el);
+        })
+        console.log(newState);
+        this.setState({masterArray: newState});
+        this.disappear()
       } else {
         alert("Something fucked up");
       }
