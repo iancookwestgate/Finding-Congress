@@ -7,7 +7,9 @@ import '../scss/styles.scss';
 function Card(props) {
 
   function handleSenatorClick() {
-    props.onCardClick();
+    props.onCardClick({
+      name: props.name,
+    });
     return;
   }
 
@@ -23,7 +25,6 @@ function Card(props) {
         </div>
       </div>
     </div>
-
   );
 }
 
@@ -31,7 +32,8 @@ Card.propTypes = {
   name: PropTypes.string,
   senateYear: PropTypes.string,
   party: PropTypes.string,
-  nextUp: PropTypes.string
+  nextUp: PropTypes.string,
+  onCardClick: React.PropTypes.func,
 };
 
 

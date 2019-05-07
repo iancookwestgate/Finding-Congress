@@ -12,11 +12,13 @@ class Home extends React.Component {
       activeClass: true,
       stageVisibleOnPage: true,
       masterArray: [],
-      html: null
+      html: null,
+      newsPrep: [],
     };
     this.disappear = this.disappear.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.apiCall = this.apiCall.bind(this);
+    this.handleCardClick = this.handleCardClick.bind(this);
   }
 
   disappear() {
@@ -28,10 +30,17 @@ class Home extends React.Component {
     }
   }
 
+  handleCardClick(props) {
+    console.log(props);
+    let newsArray = this.state.newsPrep;
+    newsArray.push(props);
+    console.log(newsArray);
+  }
+
   apiCall(event) {
     event.preventDefault();
-    let banana = this.state.stateSelect;
-    return fetch(`https://api.propublica.org/congress/v1/members/senate/${banana}/current.json`, {
+    let stateAbbreviation = this.state.stateSelect;
+    return fetch(`https://api.propublica.org/congress/v1/members/senate/${stateAbbreviation}/current.json`, {
       headers: {
         "X-API-Key": "qBzsniwfy44MpdRfy4z1WX8bnqsfkxryYtt0hdE4",
       }
@@ -46,13 +55,12 @@ class Home extends React.Component {
         console.log(newState);
         this.setState({masterArray: newState});
         const htmlVar = this.state.masterArray.map((card, index) =>
-
           <Card name={card.name}
             senateYear={card.role}
             party={card.party == "R" ? "Republican" : "Democrat"}
             nextUp={card.next_election}
             key={index}
-            onCardClick={() => this.handleCardClick()}/>
+            onCardClick={this.handleCardClick}/>
         );
         this.setState({html: htmlVar});
         this.disappear()
@@ -60,10 +68,6 @@ class Home extends React.Component {
         alert("Something messed up");
       }
     })
-  }
-
-  handleCardClick() {
-    console.log("Is this working?");
   }
 
   handleChange(event) {
