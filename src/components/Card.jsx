@@ -5,8 +5,14 @@ import '../scss/styles.scss';
 
 
 function Card(props) {
+
+  function handleSenatorClick() {
+    props.onCardClick();
+    return;
+  }
+
   return (
-    <div className="congress-layout">
+    <div onClick={handleSenatorClick} className="congress-layout">
       <div className="card">
         <img src={blank} alt="sample image"></img>
         <div className="card-container">

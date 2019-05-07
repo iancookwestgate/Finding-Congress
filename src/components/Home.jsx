@@ -51,14 +51,19 @@ class Home extends React.Component {
             senateYear={card.role}
             party={card.party == "R" ? "Republican" : "Democrat"}
             nextUp={card.next_election}
-            key={index}/>
+            key={index}
+            onCardClick={() => this.handleCardClick()}/>
         );
         this.setState({html: htmlVar});
         this.disappear()
       } else {
-        alert("Something fucked up");
+        alert("Something messed up");
       }
     })
+  }
+
+  handleCardClick() {
+    console.log("Is this working?");
   }
 
   handleChange(event) {
