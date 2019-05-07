@@ -30,11 +30,13 @@ class Home extends React.Component {
     }
   }
 
-  handleCardClick(props) {
-    console.log(props);
+  handleCardClick(name) {
+    console.log(name);
     let newsArray = this.state.newsPrep;
-    newsArray.push(props);
+    newsArray = [name];
     console.log(newsArray);
+    this.setState({newsPrep: newsArray});
+    console.log(this.state);
   }
 
   apiCall(event) {
