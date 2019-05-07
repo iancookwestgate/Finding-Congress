@@ -4,6 +4,8 @@ import icon from '../../assets/images/capitol-hill-icon.png';
 import { Link } from 'react-router-dom';
 import '../../scss/styles.scss';
 
+
+
 function Results(){
   return (
     <div className="resultsPage">
