@@ -76,7 +76,7 @@ class Home extends React.Component {
         <div className={true===this.state.activeClass? "main-select show" : "main-select hide"}>
           <form onSubmit={this.apiCall}>
             <select value={this.state.stateSelect} onChange={this.handleChange}>
-              <option selected value="">-- Select Your State --</option>
+              <option defaultValue="">-- Select Your State --</option>
               <option value="AL">Alabama</option>
               <option value="AK">Alaska</option>
               <option value="AZ">Arizona</option>
@@ -138,7 +138,7 @@ class Home extends React.Component {
           <div class="centered">
             <div class="group">
               <input type="text" id="name" required="required"/>
-              <label for="name">What political issue interests you?</label>
+              <label htmlFor="name">What political issue interests you?</label>
               <div class="bar"></div>
             </div>
           </div>
