@@ -53,7 +53,7 @@ class Results extends React.Component{
             title={article.title}
             source={article.source.name}
             date={article.publishedAt}
-            key={ind}/>
+            key={index}/>
         );
         this.setState({html: htmlVar});
       } else {
@@ -70,7 +70,9 @@ class Results extends React.Component{
           <Link to="/"><img className="capHillIcon" src={icon} alt="sample image"></img></Link>
           <h1 className="site-name">Site Name</h1>
         </div>
-            {this.state.html}
+        <div className="news-layout">
+          {this.state.html}
+        </div>
       </div>
     );
   }

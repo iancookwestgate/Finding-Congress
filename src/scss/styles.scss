@@ -134,30 +134,33 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  color: black;
   justify-content: center;
-  .card {
+  color: black;
+  .articleLink {
     margin: 5%;
-    max-width: 400px;
+    margin-right: 50px;
+    width: 350px;
     background-color: #e4e6e7;
     border-radius: 4px;
     transition: 0.3s;
     img {
-      width: 400px;
+      width: 350px;
       height: 250px;
       border-radius: 4px 4px 0 0;
+      object-fit: cover;
     }
   }
-  .card:hover {
+  .articleLink:hover {
     cursor: pointer;
     transform: scale(1.04);
   }
-  .card-container {
+  .article-container {
     padding-left: 10px;
     padding-right: 10px;
     padding-bottom: 5px;
   }
 }
+
 
 // Error404 SCSS
 .errorSection {

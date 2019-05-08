@@ -17,12 +17,10 @@ class App extends React.Component {
   }
 
   onAPIChange(e) {
-    console.log(this.state);
     this.setState({newsArray: e});
   }
 
   newsPrep(e) {
-    console.log('is working');
     this.setState({newsPrep: e});
   }
 

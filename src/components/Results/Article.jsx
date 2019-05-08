@@ -6,10 +6,10 @@ import '../../scss/styles.scss';
 function Article(props) {
 
   return (
-    <div className="news-layout">
-      <div className="card">
+    <div>
+      <div className="articleLink">
         <img src={props.image} alt="sample image"></img>
-        <div className="card-container">
+        <div className="article-container">
           <h4><b>{props.title}</b></h4>
           <p>Source: {props.source}</p>
           <p><em>Published on:</em> {props.date}</p>
