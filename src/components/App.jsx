@@ -12,14 +12,26 @@ class App extends React.Component {
     this.state = {
       newsArray: []
     };
+    this.onAPIChange = this.onAPIChange.bind(this);
+    this.newsPrep = this.newsPrep.bind(this);
   }
-  
+
+  onAPIChange(e) {
+    console.log(this.state);
+    this.setState({newsArray: e});
+  }
+
+  newsPrep(e) {
+    console.log('is working');
+    this.setState({newsPrep: e});
+  }
+
   render() {
     return (
       <div>
         <Switch>
-          <Route exact path='/' component={Home} />
-          <Route path='/Results' component={Results} />
+          <Route exact path='/' render={() =><Home newsArray={this.state.newsArray} onChange={this.onAPIChange} onNewsPrep={this.newsPrep} />} />
+          <Route path='/Results' render={() => <Results newsPrep={this.state.newsPrep} />}/>
           <Route component={Error404}/>
         </Switch>
         <Navbar/>

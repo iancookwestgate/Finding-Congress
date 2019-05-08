@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import icon from '../assets/images/capitol-hill-icon.png';
 import '../scss/styles.scss';
 import Results from './Results/Results';
+import PropTypes from 'prop-types';
 
 class Home extends React.Component {
   constructor(props) {
@@ -16,13 +17,14 @@ class Home extends React.Component {
       html: null,
       newsHtml: null,
       newsPrep: [],
-      newsArray: []
+      newsArray: props.newsArray,
+      onChange: props.onChange,
+      onNewsPrep: props.onNewsPrep,
     };
     this.disappear = this.disappear.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.apiCall = this.apiCall.bind(this);
     this.handleCardClick = this.handleCardClick.bind(this);
-    this.newsCall = this.newsCall.bind(this);
   }
 
   disappear() {
@@ -39,7 +41,7 @@ class Home extends React.Component {
     let newsArray = this.state.newsPrep;
     newsArray = [name];
     console.log(newsArray);
-    this.setState({newsPrep: newsArray});
+    this.state.onNewsPrep(newsArray);
     console.log(this.state);
   }
 
@@ -76,26 +78,7 @@ class Home extends React.Component {
     })
   }
 
-  newsCall() {
-    let senatorChoice = this.state.newsPrep[0].name;
-    return fetch(`https://newsapi.org/v2/everything?q=${senatorChoice}&from=2019-04-08&sortBy=publishedAt&apiKey=021335e9d273430db49ad77537475195`).then(
-      response => response.json(),
-    ).then((input) => {
-      if (input) {
-        let newsGather = this.state.newsArray;
-        input.articles.forEach(function(el) {
-          newsGather.push(el);
-        })
-        this.setState({newsArray: newsGather});
-        console.log(this.state.newsArray);
-      } else {
-        alert("News api isn't accessing!");
-      }
-    })
-  }
-
   handleChange(event) {
-    console.log(event.target.value);
     this.setState({stateSelect: event.target.value})
   }
 
@@ -177,13 +160,19 @@ class Home extends React.Component {
           </div>
         </div>
         <div className={true===this.state.stageVisibleOnPage? "submitButton hide" : "submitButton show"}>
-          <form onSubmit={this.newsCall}>
-            <Link to="/Results" info={this.state.newsArray}><button type="submit">Search</button></Link>
+          <form>
+            <Link to="/Results" newsPrep={this.state.newsPrep}><button type="submit">Search</button></Link>
           </form>
         </div>
       </div>
     );
   }
+}
+
+Home.propTypes = {
+  newsArray: PropTypes.array,
+  onChange: PropTypes.func,
+  onNewsPrep: PropTypes.func,
 }
 
 export default Home;
