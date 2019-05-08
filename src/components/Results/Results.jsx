@@ -32,7 +32,7 @@ class Results extends React.Component{
       monthString = "0" + month.toString();
       month = parseInt(monthString);
     }
-    return `https://newsapi.org/v2/everything?q=${senatorChoice}&from=${year}-${month}-${day}&sortBy=publishedAt&sortBy=popularity&apiKey=021335e9d273430db49ad77537475195`;
+    return `https://newsapi.org/v2/everything?q=${senatorChoice}&from=${year}-${month}-${day}&pageSize=100&sortBy=popularity&apiKey=021335e9d273430db49ad77537475195`;
   }
 
   componentDidMount() {
