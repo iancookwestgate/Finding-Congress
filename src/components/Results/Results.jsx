@@ -15,10 +15,31 @@ class Results extends React.Component{
     };
   }
 
+  CallDate(senatorChoice) {
+    let currentDay = Date.now();
+    let time = currentDay - 18000000;
+    let currentTime = new Date(time);
+    let day = currentTime.getDate();
+    let dayString;
+    if(day < 10) {
+      dayString = "0" + day.toString();
+      day = parseInt(dayString)
+    }
+    let year = currentTime.getFullYear();
+    let month = currentTime.getMonth();
+    let monthString;
+    if(month < 10) {
+      monthString = "0" + month.toString();
+      month = parseInt(monthString);
+    }
+    return `https://newsapi.org/v2/everything?q=${senatorChoice}&from=${year}-${month}-${day}&sortBy=publishedAt&apiKey=021335e9d273430db49ad77537475195`
+  }
+
   componentDidMount() {
     let senatorChoice = this.state.newsPrep[0].name;
-    console.log(senatorChoice);
-    return fetch(`https://newsapi.org/v2/everything?q=${senatorChoice}&from=2019-04-08&sortBy=publishedAt&apiKey=021335e9d273430db49ad77537475195`).then(
+    let url = this.CallDate(senatorChoice);
+    console.log(url);
+    return fetch(url).then(
       response => response.json(),
     ).then((input) => {
       if (input) {
@@ -31,7 +52,8 @@ class Results extends React.Component{
           <Article image={article.urlToImage}
             title={article.title}
             source={article.source.name}
-            date={article.publishedAt}/>
+            date={article.publishedAt}
+            key={ind}/>
         );
         this.setState({html: htmlVar});
       } else {

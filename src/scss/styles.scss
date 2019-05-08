@@ -10,7 +10,6 @@ body {
   background-size: cover;
   min-height: 690px;
   background-position-x: 40%;
-  overflow: hidden;
   @include mQ(1024px) {
     background-position-x: 0px;
   }
@@ -125,7 +124,7 @@ body {
   }
 }
 
-// Results SCSS
+// Results/Article SCSS
 .resultsPage {
   color: white;
 }
