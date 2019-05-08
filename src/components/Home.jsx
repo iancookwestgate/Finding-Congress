@@ -3,7 +3,6 @@ import Card from './Card';
 import { Link } from 'react-router-dom';
 import icon from '../assets/images/capitol-hill-icon.png';
 import '../scss/styles.scss';
-import Results from './Results/Results';
 import PropTypes from 'prop-types';
 
 class Home extends React.Component {
@@ -37,12 +36,9 @@ class Home extends React.Component {
   }
 
   handleCardClick(name) {
-    console.log(name);
     let newsArray = this.state.newsPrep;
     newsArray = [name];
-    console.log(newsArray);
     this.state.onNewsPrep(newsArray);
-    console.log(this.state);
   }
 
   apiCall(event) {
@@ -59,8 +55,7 @@ class Home extends React.Component {
         let newState = this.state.masterArray;
         input.results.forEach(function(el) {
           newState.push(el);
-        })
-        console.log(newState);
+        });
         this.setState({masterArray: newState});
         const htmlVar = this.state.masterArray.map((card, index) =>
           <Card name={card.name}
@@ -71,15 +66,15 @@ class Home extends React.Component {
             onCardClick={this.handleCardClick}/>
         );
         this.setState({html: htmlVar});
-        this.disappear()
+        this.disappear();
       } else {
         alert("Something messed up");
       }
-    })
+    });
   }
 
   handleChange(event) {
-    this.setState({stateSelect: event.target.value})
+    this.setState({stateSelect: event.target.value});
   }
 
   render() {
@@ -151,17 +146,15 @@ class Home extends React.Component {
           <div className="cardLanding">
             {this.state.html}
           </div>
-          <div class="centered">
-            <div class="group">
-              <input type="text" id="name" required="required"/>
-              <label htmlFor="name">What political issue interests you?</label>
-              <div class="bar"></div>
-            </div>
+          <div className="home-input">
+            <form>
+              <input type="text" name="issue" placeholder="Issue"></input>
+            </form>
           </div>
         </div>
         <div className={true===this.state.stageVisibleOnPage? "submitButton hide" : "submitButton show"}>
           <form>
-            <Link to="/Results" newsPrep={this.state.newsPrep}><button type="submit">Search</button></Link>
+            <Link to="/Results"><button type="submit">Search</button></Link>
           </form>
         </div>
       </div>
@@ -173,6 +166,6 @@ Home.propTypes = {
   newsArray: PropTypes.array,
   onChange: PropTypes.func,
   onNewsPrep: PropTypes.func,
-}
+};
 
 export default Home;

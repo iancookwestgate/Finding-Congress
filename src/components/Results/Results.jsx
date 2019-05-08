@@ -23,7 +23,7 @@ class Results extends React.Component{
     let dayString;
     if(day < 10) {
       dayString = "0" + day.toString();
-      day = parseInt(dayString)
+      day = parseInt(dayString);
     }
     let year = currentTime.getFullYear();
     let month = currentTime.getMonth();
@@ -32,13 +32,12 @@ class Results extends React.Component{
       monthString = "0" + month.toString();
       month = parseInt(monthString);
     }
-    return `https://newsapi.org/v2/everything?q=${senatorChoice}&from=${year}-${month}-${day}&sortBy=publishedAt&apiKey=021335e9d273430db49ad77537475195`
+    return `https://newsapi.org/v2/everything?q=${senatorChoice}&from=${year}-${month}-${day}&sortBy=publishedAt&apiKey=021335e9d273430db49ad77537475195`;
   }
 
   componentDidMount() {
     let senatorChoice = this.state.newsPrep[0].name;
     let url = this.CallDate(senatorChoice);
-    console.log(url);
     return fetch(url).then(
       response => response.json(),
     ).then((input) => {
@@ -46,7 +45,7 @@ class Results extends React.Component{
         let newsGather = this.state.newsArray;
         input.articles.forEach(function(el) {
           newsGather.push(el);
-        })
+        });
         this.setState({newsArray: newsGather});
         const htmlVar = this.state.newsArray.map((article, index) =>
           <Article image={article.urlToImage}
@@ -59,11 +58,10 @@ class Results extends React.Component{
       } else {
         alert("News api isn't accessing!");
       }
-    })
+    });
   }
 
   render() {
-    console.log(this.state.newsPrep[0].name);
     return (
       <div className="resultsPage">
         <div className="topArrange">
@@ -85,7 +83,7 @@ Results.propTypes = {
   date: PropTypes.string,
   info: PropTypes.array,
   newsArray: PropTypes.array,
-  newsPrep: PropTypes.array
+  newsPrep: PropTypes.array,
 };
 
 export default Results;
