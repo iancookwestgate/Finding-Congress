@@ -174,18 +174,20 @@ body {
 }
 
 .submitButton {
-  margin-top: 3%;
+  margin-top: 20px;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
   @include mQ(1024px) {
+    align-items: flex-start;
     justify-content: flex-start;
-    margin-top: 20%;
+    margin-left: 10%;
   }
   h1 {
     position: absolute;
     top: 5vw;
+    font-size: 45px;
     color: white;
     text-shadow:
     0.07em 0 black,
@@ -193,8 +195,8 @@ body {
     -0.07em 0 black,
     0 -0.07em black;
     @include mQ(1024px) {
-      position: relative;
-      top: auto;
+      position: fixed;
+      top: 100px;
     }
   }
   button {
@@ -205,9 +207,9 @@ body {
     width: 100px;
     border-radius: 5px;
     font-size: 16px;
-    background-color: #008CBA;
+    background-color: #f47a41;
     @include mQ(1024px) {
-      margin-top: 0;
+      margin-top: 200px;
     }
   }
 }
