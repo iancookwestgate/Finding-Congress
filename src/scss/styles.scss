@@ -10,6 +10,14 @@ body {
   background-size: cover;
 }
 
+img:hover {
+  cursor: pointer;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
 // Home SCSS
 .topArrange {
   display: flex;
@@ -19,8 +27,8 @@ body {
 }
 
 .capHillIcon {
-  margin-left: 20%;
-  margin-top: 20%;
+  margin-left: 20px;;
+  margin-top: 20px;
   height: 60px;
   @include mmQ(1024px) {
   }

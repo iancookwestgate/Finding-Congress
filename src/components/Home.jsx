@@ -27,6 +27,7 @@ class Home extends React.Component {
     this.handleChange = this.handleChange.bind(this);
     this.apiCall = this.apiCall.bind(this);
     this.handleCardClick = this.handleCardClick.bind(this);
+    this.reload = this.reload.bind(this);
   }
 
   disappear() {
@@ -83,11 +84,15 @@ class Home extends React.Component {
     this.setState({stateSelect: event.target.value});
   }
 
+  reload() {
+    window.location.reload();
+  }
+
   render() {
     return (
       <div>
         <div className="topArrange">
-          <Link to="/"><img className="capHillIcon" src={icon} alt="sample image"></img></Link>
+          <img onClick={this.reload} className="capHillIcon" src={icon} alt="sample image" ></img>
           <h1 className={true===this.state.activeClass? "site-name show" : "site-name hide"}>Finding Congress</h1>
         </div>
         <div className={true===this.state.activeClass? "main-select show" : "main-select hide"}>
