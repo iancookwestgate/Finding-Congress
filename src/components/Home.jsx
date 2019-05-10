@@ -159,7 +159,7 @@ class Home extends React.Component {
         </div>
         <div className={true===this.state.stageVisibleOnPage? "submitButton hide" : "submitButton show"}>
           <form>
-            <Link to="/Results"><button type="submit">Search</button></Link>
+            <Link to="/Results"><button id="secondButton" type="submit">Search</button></Link>
           </form>
         </div>
       </div>

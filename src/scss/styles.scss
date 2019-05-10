@@ -174,9 +174,26 @@ body {
 }
 
 .submitButton {
-  margin-top: 10%;
+  margin-top: 3%;
   display: flex;
   justify-content: center;
+  @include mQ(1024px) {
+    justify-content: flex-start;
+    margin-top: 20%;
+  }
+  button {
+    color: white;
+    height: 35px;
+    border: 1px solid black;
+    width: 100px;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #008CBA;
+  }
+}
+
+#secondButton {
+
 }
 
 // Navbar SCSS

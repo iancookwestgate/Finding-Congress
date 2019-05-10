@@ -67,7 +67,7 @@ class Results extends React.Component{
       <div className="resultsPage">
         <div className="topArrange">
           <Link to="/"><img className="capHillIcon" src={icon} alt="sample image"></img></Link>
-          <h1 className="site-name">Site Name</h1>
+          <h1 className="site-name">Finding Congress</h1>
         </div>
         <div className="news-layout">
           {this.state.html}
