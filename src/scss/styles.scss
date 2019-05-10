@@ -4,7 +4,7 @@
 
 // Global SCSS
 body {
-  background-image: url("../assets/images/Capitol-Dome-Night-Light-Blur.jpg");
+  background-image: url("../assets/images/Internal-Columns.jpg");
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
@@ -36,13 +36,14 @@ body {
   display: flex;
   flex-direction: column;
   margin-left: 15%;
-  margin-top: 4%;
-  height: 230px;
+  margin-top: 8%;
+  height: 245px;
   width: 340px;
   background-color: #e4e6e7;
   border-radius: 5px;
   h2 {
     margin-left: 30px;
+    margin-right: 10px;
   }
   @include mmQ(1024px) {
     margin: 0 auto;

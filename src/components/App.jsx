@@ -1,5 +1,4 @@
 import React from 'react';
-import Navbar from './Navbar';
 import Home from './Home';
 import Results from './Results/Results';
 import { Switch, Route } from 'react-router-dom';
@@ -32,7 +31,6 @@ class App extends React.Component {
           <Route path='/Results' render={() => <Results newsPrep={this.state.newsPrep} />}/>
           <Route component={Error404}/>
         </Switch>
-        <Navbar/>
       </div>
     );
   }

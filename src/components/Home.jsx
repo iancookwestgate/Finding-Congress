@@ -85,7 +85,7 @@ class Home extends React.Component {
           <h1 className={true===this.state.activeClass? "site-name show" : "site-name hide"}>Site Name</h1>
         </div>
         <div className={true===this.state.activeClass? "main-select show" : "main-select hide"}>
-          <h2>Learn more about representatives and news.</h2>
+          <h2>Learn more about your representatives and the news.</h2>
           <form onSubmit={this.apiCall}>
             <div className="input-area">
               <select value={this.state.stateSelect} onChange={this.handleChange}>
