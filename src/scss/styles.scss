@@ -94,14 +94,13 @@ body {
 .secondRound {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
-  background-color: blue;
   @include mQ(1024px) {
     align-items: flex-end;
+    justify-content: space-between;
     background-color: black;
     height: 100%;
-    width: 400px;
+    width: 440px;
     position: fixed;
     z-index: 3;
     top: 0;
@@ -111,7 +110,9 @@ body {
 }
 
 .cardLanding {
-  background-color: green;
+  margin-right: 20px;
+  margin-top: 20px;
+  margin-left: 20px;
 }
 
 .congress-layout {
@@ -136,6 +137,26 @@ body {
   }
   .card-container {
     padding-right: 5px;
+  }
+}
+
+.home-input {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5%;
+  form {
+    margin: 0 auto;
+  }
+  p {
+    color: white;
+  }
+  @include mQ(1024px) {
+    margin-bottom: 50%;
+    margin-left: 5%;
+    margin-right: 5%;
+    form {
+    
+    }
   }
 }
 

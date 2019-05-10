@@ -150,6 +150,7 @@ class Home extends React.Component {
             {this.state.html}
           </div>
           <div className="home-input">
+            <p>Is there an issue you want to see your representative's stance on?</p>
             <form>
               <input type="text" name="issue" placeholder="Issue"></input>
             </form>
