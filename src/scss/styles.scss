@@ -4,7 +4,7 @@
 
 // Global SCSS
 body {
-  
+
 }
 
 // Home SCSS
@@ -14,11 +14,9 @@ body {
 
 .capHillIcon {
   margin-left: 2%;
-  margin-top: 2%;
-  height: 100px;
-  margin-bottom: -6%;
+  margin-top: 1%;
+  height: 60px;
   @include mmQ(1024px) {
-    margin-bottom: -15%;
   }
 }
 
