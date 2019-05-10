@@ -85,7 +85,7 @@ class Home extends React.Component {
 
   render() {
     return (
-      <div className="bodyHome">
+      <div>
         <div className="topArrange">
           <Link to="/"><img className="capHillIcon" src={icon} alt="sample image"></img></Link>
           <h1 className={true===this.state.activeClass? "site-name show" : "site-name hide"}>Finding Congress</h1>
