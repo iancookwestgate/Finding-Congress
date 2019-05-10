@@ -9,7 +9,7 @@ class Home extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      stateSelect: "select",
+      stateSelect: "",
       activeClass: true,
       stageVisibleOnPage: true,
       masterArray: [],
@@ -53,7 +53,6 @@ class Home extends React.Component {
       response => response.json(),
     ).then((input) => {
       if (input) {
-        console.log(input);
         let newState = this.state.masterArray;
         input.results.forEach(function(el) {
           newState.push(el);
