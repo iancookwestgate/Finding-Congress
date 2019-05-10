@@ -4,7 +4,7 @@
 
 // Global SCSS
 body {
-
+  background-image: url("../assets/images/Capitol-Dome-Night-Light-Blur.jpg");
 }
 
 // Home SCSS
@@ -31,7 +31,12 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 200px;
+  margin-left: 15%;
+  margin-top: 4%;
+  height: 300px;
+  width: 300px;
+  background-color: #e4e6e7;
+  border-radius: 5px;
   select {
     height: 40px;
     border-radius: 5px;
