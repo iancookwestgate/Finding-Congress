@@ -82,7 +82,7 @@ class Home extends React.Component {
       <div>
         <div className="topArrange">
           <Link to="/"><img className="capHillIcon" src={icon} alt="sample image"></img></Link>
-          <h1 className="site-name">Site Name</h1>
+          <h1 className={true===this.state.activeClass? "site-name show" : "site-name hide"}>Site Name</h1>
         </div>
         <div className={true===this.state.activeClass? "main-select show" : "main-select hide"}>
           <h2>Learn more about representatives and news.</h2>

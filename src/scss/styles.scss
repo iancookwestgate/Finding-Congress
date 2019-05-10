@@ -5,6 +5,12 @@
 // Global SCSS
 body {
   background-image: url("../assets/images/Capitol-Dome-Night-Light-Blur.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 // Home SCSS
@@ -90,16 +96,17 @@ body {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  height: 100%;
-  width: 400px;
-  position: fixed;
-  z-index: 3;
-  top: 0;
-  right: 0;
-  overflow-x: hidden;
   background-color: blue;
   @include mQ(1024px) {
     align-items: flex-end;
+    background-color: black;
+    height: 100%;
+    width: 400px;
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    right: 0;
+    overflow-x: hidden;
   }
 }
 
@@ -115,6 +122,7 @@ body {
     transition: 0.1s;
     cursor: pointer;
     margin-top: 5%;
+
     @include mmQ(1024px) {
       margin-bottom: 7%;
     }
@@ -135,11 +143,6 @@ body {
   margin-top: 10%;
   display: flex;
   justify-content: center;
-  // Correct the below later. The margin-bottom percentages. Artificially bloats the background image on small screen to cover up white space.
-  margin-bottom: 80%;
-  @include mQ(1024px) {
-    margin-bottom: 30%;
-  }
 }
 
 // Navbar SCSS
