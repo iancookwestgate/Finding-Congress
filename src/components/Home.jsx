@@ -46,7 +46,6 @@ class Home extends React.Component {
   apiCall(event) {
     event.preventDefault();
     let stateAbbreviation = this.state.stateSelect;
-    console.log(this.state.stateText);
     return fetch(`https://api.propublica.org/congress/v1/members/senate/${stateAbbreviation}/current.json`, {
       headers: {
         "X-API-Key": "qBzsniwfy44MpdRfy4z1WX8bnqsfkxryYtt0hdE4",
@@ -163,7 +162,7 @@ class Home extends React.Component {
           </div>
         </div>
         <div className={true===this.state.stageVisibleOnPage? "submitButton hide" : "submitButton show"}>
-          <h1>Alabama</h1>
+          <h1>{this.state.stateText}</h1>
           <form>
             <Link to="/Results"><button id="secondButton" type="submit">Search</button></Link>
           </form>
