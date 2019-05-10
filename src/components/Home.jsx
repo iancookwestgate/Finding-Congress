@@ -35,6 +35,10 @@ class Home extends React.Component {
     if (this.state.activeClass === true) {
       this.setState({activeClass: false});
     }
+    let changedBg = (
+      backgroundImage: url('../assets/images/Capitol-Dome-Night-Light-Blur.jpg');
+    )
+    document.body.style = {changedBg};
   }
 
   handleCardClick(name) {
@@ -83,13 +87,13 @@ class Home extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="bodyHome">
         <div className="topArrange">
           <Link to="/"><img className="capHillIcon" src={icon} alt="sample image"></img></Link>
           <h1 className={true===this.state.activeClass? "site-name show" : "site-name hide"}>Finding Congress</h1>
         </div>
         <div className={true===this.state.activeClass? "main-select show" : "main-select hide"}>
-          <h2>Learn more about your representatives and the news.</h2>
+          <h2>Learn more about your representatives in the news.</h2>
           <form onSubmit={this.apiCall}>
             <div className="input-area">
               <select value={this.state.stateSelect} onChange={this.handleChange}>
