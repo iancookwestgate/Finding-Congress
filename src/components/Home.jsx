@@ -46,6 +46,7 @@ class Home extends React.Component {
   apiCall(event) {
     event.preventDefault();
     let stateAbbreviation = this.state.stateSelect;
+    console.log(this.state.stateText);
     return fetch(`https://api.propublica.org/congress/v1/members/senate/${stateAbbreviation}/current.json`, {
       headers: {
         "X-API-Key": "qBzsniwfy44MpdRfy4z1WX8bnqsfkxryYtt0hdE4",
@@ -76,7 +77,8 @@ class Home extends React.Component {
   }
 
   handleChange(event) {
-    console.log(event.target.value);
+    let index = event.target.selectedIndex;
+    this.setState({stateText: event.target[index].text});
     this.setState({stateSelect: event.target.value});
   }
 
