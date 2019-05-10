@@ -114,6 +114,12 @@ body {
   }
 }
 
+#rep-text {
+  @include mQ(1024px) {
+    margin-top: 5%;
+  }
+}
+
 .cardLanding {
   margin-right: 20px;
   margin-top: 20px;
@@ -154,7 +160,7 @@ body {
   form {
     margin-top: 15%;
   }
-  p {
+  span {
     margin: 0 auto;
   }
   @include mQ(1024px) {

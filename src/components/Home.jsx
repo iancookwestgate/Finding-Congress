@@ -146,7 +146,7 @@ class Home extends React.Component {
           </form>
         </div>
         <div className={true===this.state.stageVisibleOnPage? "secondRound hide" : "secondRound show"}>
-          <span>Select a representative:</span>
+          <span id="rep-text">Select a representative:</span>
           <div className="cardLanding">
             {this.state.html}
           </div>
