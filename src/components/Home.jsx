@@ -2,6 +2,7 @@ import React from 'react';
 import Card from './Card';
 import { Link } from 'react-router-dom';
 import icon from '../assets/images/capitol-hill-icon.png';
+import capitol from '../assets/images/Capitol-Dome-Night-Light-Blur.jpg';
 import '../scss/styles.scss';
 import PropTypes from 'prop-types';
 
@@ -35,10 +36,7 @@ class Home extends React.Component {
     if (this.state.activeClass === true) {
       this.setState({activeClass: false});
     }
-    let changedBg = (
-      backgroundImage: url('../assets/images/Capitol-Dome-Night-Light-Blur.jpg');
-    )
-    document.body.style = {changedBg};
+    document.body.style.backgroundImage = {capitol};
   }
 
   handleCardClick(name) {
