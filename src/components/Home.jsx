@@ -146,11 +146,12 @@ class Home extends React.Component {
           </form>
         </div>
         <div className={true===this.state.stageVisibleOnPage? "secondRound hide" : "secondRound show"}>
+          <p>Select a representative:</p>
           <div className="cardLanding">
             {this.state.html}
           </div>
           <div className="home-input">
-            <p>Is there an issue you want to see your representative's stance on?</p>
+            <p>Select an issue:</p>
             <form>
               <input type="text" name="issue" placeholder="Issue"></input>
             </form>
