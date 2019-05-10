@@ -10,6 +10,7 @@ class Home extends React.Component {
     super(props);
     this.state = {
       stateSelect: "",
+      stateText: "",
       activeClass: true,
       stageVisibleOnPage: true,
       masterArray: [],
@@ -75,6 +76,7 @@ class Home extends React.Component {
   }
 
   handleChange(event) {
+    console.log(event.target.value);
     this.setState({stateSelect: event.target.value});
   }
 
