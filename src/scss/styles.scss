@@ -28,8 +28,14 @@ body {
 
 .site-name {
   color: white;
+  font-size: 45px;
   margin: 0 auto;
   text-align: center;
+  text-shadow:
+  0.07em 0 black,
+  0 0.07em black,
+  -0.07em 0 black,
+  0 -0.07em black;
 }
 
 .main-select {
