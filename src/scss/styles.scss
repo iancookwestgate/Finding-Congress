@@ -79,6 +79,7 @@ body {
 .hide {
   transition: .3s linear;
   opacity: 0;
+  height: 0;
 }
 
 .secondRound {
@@ -100,10 +101,10 @@ body {
     cursor: pointer;
     margin-top: 5%;
     @include mmQ(1024px) {
-      margin-bottom: 15%;
+      margin-bottom: 7%;
     }
     img {
-      height: 240px;
+      height: 100px;
       border-radius: 4px 0 0 4px;
     }
   }
@@ -111,7 +112,7 @@ body {
     transform: scale(1.04);
   }
   .card-container {
-    padding: 20px;
+    // padding: 20px;
   }
 }
 
