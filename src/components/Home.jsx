@@ -82,7 +82,7 @@ class Home extends React.Component {
       <div>
         <div className="topArrange">
           <Link to="/"><img className="capHillIcon" src={icon} alt="sample image"></img></Link>
-          <h1 className={true===this.state.activeClass? "site-name show" : "site-name hide"}>Site Name</h1>
+          <h1 className={true===this.state.activeClass? "site-name show" : "site-name hide"}>Finding Congress</h1>
         </div>
         <div className={true===this.state.activeClass? "main-select show" : "main-select hide"}>
           <h2>Learn more about your representatives and the news.</h2>
@@ -146,12 +146,12 @@ class Home extends React.Component {
           </form>
         </div>
         <div className={true===this.state.stageVisibleOnPage? "secondRound hide" : "secondRound show"}>
-          <p>Select a representative:</p>
+          <span>Select a representative:</span>
           <div className="cardLanding">
             {this.state.html}
           </div>
           <div className="home-input">
-            <p>Select an issue:</p>
+            <span>Select an issue:</span>
             <form>
               <input type="text" name="issue" placeholder="Issue"></input>
             </form>
