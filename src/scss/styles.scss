@@ -29,17 +29,34 @@ body {
 .main-select {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   margin-left: 15%;
   margin-top: 4%;
   height: 300px;
-  width: 300px;
+  width: 340px;
   background-color: #e4e6e7;
   border-radius: 5px;
+  h2 {
+    margin-left: 30px;
+  }
+  @include mmQ(1024px) {
+    margin: 0 auto;
+    margin-top: 10%;
+  }
+}
+
+.input-area {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
   select {
+    margin-right: 25%;
     height: 40px;
     border-radius: 5px;
+    margin-bottom: 10%;
+  }
+  button {
+    width: 60px;
+    margin-right: 25%;
   }
 }
 
