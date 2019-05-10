@@ -14,6 +14,7 @@ class Home extends React.Component {
       stageVisibleOnPage: true,
       masterArray: [],
       html: null,
+      stateHtml: null,
       newsHtml: null,
       newsPrep: [],
       newsArray: props.newsArray,
@@ -52,6 +53,7 @@ class Home extends React.Component {
       response => response.json(),
     ).then((input) => {
       if (input) {
+        console.log(input);
         let newState = this.state.masterArray;
         input.results.forEach(function(el) {
           newState.push(el);
@@ -158,6 +160,7 @@ class Home extends React.Component {
           </div>
         </div>
         <div className={true===this.state.stageVisibleOnPage? "submitButton hide" : "submitButton show"}>
+          <h1>Alabama</h1>
           <form>
             <Link to="/Results"><button id="secondButton" type="submit">Search</button></Link>
           </form>

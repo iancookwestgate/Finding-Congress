@@ -177,11 +177,28 @@ body {
   margin-top: 3%;
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
   @include mQ(1024px) {
     justify-content: flex-start;
     margin-top: 20%;
   }
+  h1 {
+    position: absolute;
+    top: 5vw;
+    color: white;
+    text-shadow:
+    0.07em 0 black,
+    0 0.07em black,
+    -0.07em 0 black,
+    0 -0.07em black;
+    @include mQ(1024px) {
+      position: relative;
+      top: auto;
+    }
+  }
   button {
+    margin-top: 25%;
     color: white;
     height: 35px;
     border: 1px solid black;
@@ -189,6 +206,9 @@ body {
     border-radius: 5px;
     font-size: 16px;
     background-color: #008CBA;
+    @include mQ(1024px) {
+      margin-top: 0;
+    }
   }
 }
 
