@@ -216,11 +216,10 @@ button:hover {
   button {
     margin-top: 25%;
     color: white;
-    height: 35px;
     border: 1px solid black;
-    width: 100px;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 28px;
+    text-shadow: 2px 2px black;
     background-color: #f47a41;
     @include mQ(1024px) {
       margin-top: 200px;
