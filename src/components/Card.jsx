@@ -18,10 +18,9 @@ function Card(props) {
       <div className="card">
         <img src={blank} alt="sample image"></img>
         <div className="card-container">
-          <h4><b>{props.name}</b></h4>
-          <p>{props.senateYear}</p>
+          <p><b>{props.name}</b> - {props.senateYear}</p>
           <p>{props.party}</p>
-          <p>Next Election: {props.nextUp}</p>
+          <p><em>Next Election:</em> {props.nextUp}</p>
         </div>
       </div>
     </div>
