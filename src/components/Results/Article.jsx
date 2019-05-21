@@ -8,12 +8,15 @@ function Article(props) {
   return (
     <div>
       <div className="articleLink">
-        <img src={props.image} alt="sample image"></img>
-        <div className="article-container">
-          <h4><b>{props.title}</b></h4>
-          <p>Source: {props.source}</p>
-          <p><em>Published on:</em> {props.date}</p>
-        </div>
+        <a href="https://www.economist.com/">
+          <img src={props.image} alt="sample image"></img>
+          <div className="article-container">
+            <h4><b>{props.title}</b></h4>
+            <p>Source: {props.source}</p>
+            <p><em>Published on:</em> {props.date}</p>
+          </div>
+        </a>
+
       </div>
     </div>
   );
