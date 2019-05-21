@@ -42,13 +42,14 @@ To be added soon.
 * Webpack
 * React
 * ESLint
+* ProPublica Congress API (https://projects.propublica.org/api-docs/congress-api/)
+* News API (https://newsapi.org/)
 
 ## Known Bugs
 
-* Console errors:
-   * Unknown DOM property class. Did you mean className?
-   * Unknown DOM property for. Did you mean htmlFor?
-   * validateDOMNesting(...): <a> cannot appear as a descendant of <a>. See Navbar > Link > a > ... > a.
+* One has to click the representative card of choice at least two times for the system to receive the result.
+* The representatives do not receive images from the ProPublica Congress API. I need to find a different API to get them images based on the selected state.
+* 
 
 ## Support and contact details
 
