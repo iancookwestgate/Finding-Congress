@@ -1,4 +1,4 @@
-# Capstone Project
+# Finding Congress
 
 #### By **Ian Cook Westgate**
 
@@ -14,7 +14,7 @@ To be added soon.
 
 * In your terminal, if you intend to view the code and want to make the React pages more legible, enter `apm install react`.
 * Using your terminal, clone this repo by inputting `git clone https://github.com/iancookwestgate/capstone-project.git`.
-* Navigate to the folder in the terminal by typing in: `cd capstone-project`.
+* Navigate to the folder in the terminal by typing in: `cd Finding-Congress`.
 * In your terminal, enter `npm install` to install necessary dependencies.
 * Then enter `npm run start` to prep the project to be viewed.
 * In your web browser, go to `http://localhost:8080/` to see the project.
@@ -27,9 +27,9 @@ To be added soon.
 
 ## Planned Features
 
-* API connections have not yet been made.
-* Select menus and buttons are not yet working properly.
-* Styling needs to be tidied up for buttons, navbar, and site name.
+* News cards will take you to the relevant websites on click.
+* The background/theme of the site will change based on what state you selected (to encourage the user to look into states beyond just their own).
+* Incentives for the user to return to the site such as: retaining what the user
 
 ## Technologies Used
 
@@ -49,7 +49,7 @@ To be added soon.
 
 * One has to click the representative card of choice at least two times for the system to receive the result.
 * The representatives do not receive images from the ProPublica Congress API. I need to find a different API to get them images based on the selected state.
-* 
+* The "Issue" select option currently does not do anything.
 
 ## Support and contact details
 

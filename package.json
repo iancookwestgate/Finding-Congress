@@ -1,5 +1,5 @@
 {
-  "name": "Capstone-Project",
+  "name": "Finding-Congress",
   "version": "1.0.0",
   "description": "",
   "main": "index.jsx",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/iancookwestgate/capstone-project"
+    "url": "git+https://github.com/iancookwestgate/finding-congress"
   },
   "keywords": [
     "react",
@@ -20,9 +20,9 @@
   "author": "Ian",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/iancookwestgate/capstone-project"
+    "url": "https://github.com/iancookwestgate/finding-congress"
   },
-  "homepage": "https://github.com/iancookwestgate/capstone-project",
+  "homepage": "https://github.com/iancookwestgate/finding-congress",
   "dependencies": {
     "aos": "^3.0.0-beta.6",
     "css-loader": "^2.1.1",
