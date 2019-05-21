@@ -27,9 +27,9 @@ To be added soon.
 
 ## Planned Features
 
-* News cards will take you to the relevant websites on click.
+* The site currently only tracks senators. It will eventually include details of House representatives too.
 * The background/theme of the site will change based on what state you selected (to encourage the user to look into states beyond just their own).
-* Incentives for the user to return to the site such as: retaining what the user
+* Incentives for the user to return to the site. This could take the form of remembering previous user searches and/or establishing a database so the user can save/recommend their searches to other users.
 
 ## Technologies Used
 
