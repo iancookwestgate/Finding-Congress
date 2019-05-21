@@ -44,6 +44,7 @@ class Results extends React.Component{
     ).then((input) => {
       if (input) {
         let newsGather = this.state.newsArray;
+        console.log(newsGather);
         input.articles.forEach(function(el) {
           newsGather.push(el);
         });
@@ -53,6 +54,7 @@ class Results extends React.Component{
             title={article.title}
             source={article.source.name}
             date={article.publishedAt}
+            link={article.url}
             key={index}/>
         );
         this.setState({html: htmlVar});
@@ -79,6 +81,7 @@ class Results extends React.Component{
 
 Results.propTypes = {
   image: PropTypes.string,
+  url: PropTypes.string,
   title: PropTypes.string,
   source: PropTypes.string,
   date: PropTypes.string,

@@ -8,7 +8,7 @@ function Article(props) {
   return (
     <div>
       <div className="articleLink">
-        <a href="https://www.economist.com/">
+        <a href={props.link}>
           <img src={props.image} alt="sample image"></img>
           <div className="article-container">
             <h4><b>{props.title}</b></h4>
@@ -24,6 +24,7 @@ function Article(props) {
 
 Article.propTypes = {
   image: PropTypes.string,
+  url: PropTypes.string,
   title: PropTypes.string,
   source: PropTypes.string,
   date: PropTypes.string,
