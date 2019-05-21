@@ -14,15 +14,18 @@ function Card(props) {
   }
 
   return (
-    <div onClick={handleSenatorClick} className="congress-layout">
-      <div className="card">
-        <img src={blank} alt="sample image"></img>
-        <div className="card-container">
-          <p><b>{props.name}</b> - {props.senateYear}</p>
-          <p>{props.party}</p>
-          <p><em>Next Election:</em> {props.nextUp}</p>
+    <div onClick={handleSenatorClick}>
+      <div className="congress-layout">
+        <div className="card">
+          <img src={blank} alt="sample image"></img>
+          <div className="card-container">
+            <p><b>{props.name}</b> - {props.senateYear}</p>
+            <p>{props.party}</p>
+            <p><em>Next Election:</em> {props.nextUp}</p>
+          </div>
         </div>
       </div>
+
     </div>
   );
 }
