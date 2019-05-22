@@ -25,6 +25,7 @@ function Article(props) {
 Article.propTypes = {
   image: PropTypes.string,
   url: PropTypes.string,
+  link: PropTypes.string,
   title: PropTypes.string,
   source: PropTypes.string,
   date: PropTypes.string,

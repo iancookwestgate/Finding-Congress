@@ -44,7 +44,6 @@ class Results extends React.Component{
     ).then((input) => {
       if (input) {
         let newsGather = this.state.newsArray;
-        console.log(newsGather);
         input.articles.forEach(function(el) {
           newsGather.push(el);
         });
