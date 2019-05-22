@@ -181,6 +181,24 @@ class Home extends React.Component {
               <div id="trade-policy" className="issueBox">
                 <h2>Trade Policy</h2>
               </div>
+              <div id="abortion" className="issueBox">
+                <h2>Abortion</h2>
+              </div>
+              <div id="immigration" className="issueBox">
+                <h2>Immigration</h2>
+              </div>
+              <div id="military" className="issueBox">
+                <h2>Military</h2>
+              </div>
+              <div id="eu" className="issueBox">
+                <h2>European Union</h2>
+              </div>
+              <div id="welfare" className="issueBox">
+                <h2>Welfare</h2>
+              </div>
+              <div id="space-travel" className="issueBox">
+                <h2>Space Travel</h2>
+              </div>
             </div>
           </div>
         </div>
