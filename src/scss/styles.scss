@@ -35,7 +35,7 @@ button:hover {
 }
 
 .site-name {
-  font-family: 'Open Sans', sans-serif;  
+  font-family: 'Open Sans', sans-serif;
   color: white;
   font-size: 45px;
   margin: 0 auto;
@@ -285,7 +285,7 @@ button:hover {
     text-shadow: 2px 2px black;
     background-color: #f47a41;
     @include mQ(1024px) {
-      margin-top: 200px;
+      margin-top: 400px;
     }
   }
 }
