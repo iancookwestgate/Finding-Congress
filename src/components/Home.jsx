@@ -162,10 +162,26 @@ class Home extends React.Component {
             {this.state.html}
           </div>
           <div className="home-input">
-            <span>Select an issue:</span>
-            <form>
-              <input type="text" name="issue" placeholder="Issue"></input>
-            </form>
+            <div className="issueMaster">
+              <div id="healthcare" className="issueBox">
+                <h2>Healthcare</h2>
+              </div>
+              <div id="infrastructure" className="issueBox">
+                <h2>Infrastructure</h2>
+              </div>
+              <div id="foreign-policy" className="issueBox">
+                <h2>Foreign Policy</h2>
+              </div>
+              <div id="technology" className="issueBox">
+                <h2>Technology</h2>
+              </div>
+              <div id="climate-change" className="issueBox">
+                <h2>Climate Change</h2>
+              </div>
+              <div id="trade-policy" className="issueBox">
+                <h2>Trade Policy</h2>
+              </div>
+            </div>
           </div>
         </div>
         <div className={true===this.state.stageVisibleOnPage? "submitButton hide" : "submitButton show"}>

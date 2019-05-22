@@ -10,10 +10,6 @@ body {
   background-size: cover;
 }
 
-.bodyBackground {
-
-}
-
 img:hover {
   cursor: pointer;
 }
@@ -174,7 +170,7 @@ button:hover {
 .home-input {
   display: flex;
   flex-direction: column;
-  margin-top: 5%;
+  margin-top: 1%;
   form {
     margin-top: 15%;
   }
@@ -182,13 +178,73 @@ button:hover {
     margin: 0 auto;
   }
   @include mQ(1024px) {
-    margin-bottom: 50%;
     margin-left: 5%;
     margin-right: 5%;
-    form {
-
-    }
   }
+}
+
+.issueMaster {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+}
+
+.issueBox {
+  margin-top: 1%;
+  margin-left: 1%;
+  margin-right: 1%;
+  height: 150px;
+  width: 200px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.1s;
+  @include mQ(1024px) {
+    width: 180px;
+    height: 115px;
+  }
+  h2 {
+    color: white;
+    text-shadow:
+    0.07em 0 black,
+    0 0.07em black,
+    -0.07em 0 black,
+    0 -0.07em black;
+    text-align: center;
+  }
+  .issueBox:active {
+    transform: scale(1.04);
+  }
+}
+
+#healthcare {
+  background-image: url('../assets/images/Healthcare.jpeg');
+  background-size: cover;
+}
+
+#infrastructure {
+  background-image: url('../assets/images/Infrastructure.jpeg');
+  background-size: cover;
+}
+
+#foreign-policy {
+  background-image: url('../assets/images/Foreign-Policy.jpeg');
+  background-size: cover;
+}
+
+#technology {
+  background-image: url('../assets/images/Technology.jpeg');
+  background-size: cover;
+}
+
+#climate-change {
+  background-image: url('../assets/images/Climate-Change.jpeg');
+  background-size: cover;
+}
+
+#trade-policy {
+  background-image: url('../assets/images/Trade-Policy.jpeg');
+  background-size: cover;
 }
 
 .submitButton {
