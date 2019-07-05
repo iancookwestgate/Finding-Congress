@@ -8,8 +8,8 @@ In a world brimming over with breaking news, it's easy to get overwhelmed and fe
 
 ## Depiction
 
-![Home Page](src/assets/imgs/Finding-Congress-pic-1.PNG)
-![Selection Page](src/assets/imgs/Finding-Congress-pic-2.PNG)
+![Home Page](src/assets/images/Finding-Congress-pic-1.PNG)
+![Selection Page](src/assets/images/Finding-Congress-pic-2.PNG)
 
 ## Setup
 
