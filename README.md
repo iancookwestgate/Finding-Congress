@@ -6,6 +6,11 @@
 
 In a world brimming over with breaking news, it's easy to get overwhelmed and feel powerless about what you hear. This site aims to overcome that feeling by presenting the news through a simple filter: you select your state, select the congressman/woman of your choice, type in an issue you'd like to hear their opinion on (or not), and then click a button. You're immediately presented with curated results from the News API and info on how to contact your representative to support (or chastise) them for their publicly declared stance on the matter.
 
+## Depiction
+
+![Home Page](/assets/imgs/Finding-Congress-pic-1.PNG)
+![Selection Page](/assets/imgs/Finding-Congress-pic-2.PNG)
+
 ## Setup
 
 * In your terminal, if you intend to view the code and want to make the React pages more legible, enter `apm install react`.
