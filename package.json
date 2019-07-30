@@ -7,9 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server",
     "lint": "eslint src/** src/**/**; exit 0",
-    "fix": "eslint src/** src/**/** --fix; exit 0",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "fix": "eslint src/** src/**/** --fix; exit 0"
   },
   "repository": {
     "type": "git",
@@ -24,7 +22,7 @@
   "bugs": {
     "url": "https://github.com/iancookwestgate/finding-congress"
   },
-  "homepage": "https://iancookwestgate.github.io/finding-congress",
+  "homepage": "https://github.com/iancookwestgate/finding-congress",
   "dependencies": {
     "aos": "^3.0.0-beta.6",
     "css-loader": "^2.1.1",
