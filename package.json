@@ -22,10 +22,11 @@
   "bugs": {
     "url": "https://github.com/iancookwestgate/finding-congress"
   },
-  "homepage": "https://github.com/iancookwestgate/finding-congress",
+  "homepage": "https://iancookwestgate.github.io/finding-congress",
   "dependencies": {
     "aos": "^3.0.0-beta.6",
     "css-loader": "^2.1.1",
+    "gh-pages": "^2.0.1",
     "moment": "^2.18.1",
     "prop-types": "^15.7.2",
     "react": "^15.5.4",
