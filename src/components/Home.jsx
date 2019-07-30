@@ -19,6 +19,7 @@ class Home extends React.Component {
       stateHtml: null,
       newsHtml: null,
       newsPrep: [],
+
       newsArray: props.newsArray,
       onChange: props.onChange,
       onNewsPrep: props.onNewsPrep,
@@ -45,6 +46,13 @@ class Home extends React.Component {
     newsArray = [name];
     this.state.onNewsPrep(newsArray);
   }
+
+  // handleSenatorClick() {
+  //   props.onCardClick({
+  //     name: props.name,
+  //   });
+  //   return;
+  // }
 
   apiCall(event) {
     event.preventDefault();
