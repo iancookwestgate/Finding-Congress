@@ -4,7 +4,7 @@
 
 ## Description
 
-In a world brimming over with breaking news, it's easy to get overwhelmed and feel powerless about what you hear. This site aims to overcome that feeling by presenting the news through a simple filter: you select your state, select the congressman/woman of your choice, type in an issue you'd like to hear their opinion on (or not), and then click a button. You're immediately presented with curated results from the News API and info on how to contact your representative to support (or chastise) them for their publicly declared stance on the matter.
+In a world brimming over with breaking news, it's easy to get overwhelmed and feel powerless about what you hear. This site aims to overcome that feeling by presenting the news through a simple filter: you select your state, select the congressman/woman of your choice, input an issue you'd like to hear their opinion on (or not), and then click a button. You're immediately presented with curated results from the News API and info on how to contact your representative to support (or chastise) them for their publicly declared stance on the matter.
 
 ## Depiction
 
@@ -29,6 +29,7 @@ In a world brimming over with breaking news, it's easy to get overwhelmed and fe
 ## Planned Features
 
 * The site is currently laid out to only track senators. It will eventually include details of House representatives too.
+* Issue selection functionality is not yet included.
 * The background/theme of the site will change based on what state you selected (to encourage the user to look into states beyond just their own).
 * Incentives for the user to return to the site. This could take the form of remembering previous user searches and/or establishing a database so the user can save/recommend their searches to other users.
 
@@ -49,6 +50,8 @@ In a world brimming over with breaking news, it's easy to get overwhelmed and fe
 ## Known Bugs
 
 * The representatives do not receive images from the ProPublica Congress API. I need to find a different API to get them images based on the selected state.
+* Issue selection is not yet implemented.
+* If images are not present from the News API, they come in as broken links.
 
 ## Support and contact details
 
